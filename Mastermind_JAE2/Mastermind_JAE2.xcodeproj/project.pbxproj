@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44B8DC0B23D0A54800D6F8C4 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8DC0A23D0A54800D6F8C4 /* PopUpViewController.swift */; };
 		EA7A754C23CCB11600CB6766 /* TeamClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A754B23CCB11600CB6766 /* TeamClass.swift */; };
 		EADB6F2023CCAAFA00FD0CAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADB6F1F23CCAAFA00FD0CAB /* AppDelegate.swift */; };
 		EADB6F2223CCAAFA00FD0CAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADB6F2123CCAAFA00FD0CAB /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		44B8DC0A23D0A54800D6F8C4 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		EA7A754B23CCB11600CB6766 /* TeamClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamClass.swift; sourceTree = "<group>"; };
 		EADB6F1C23CCAAFA00FD0CAB /* Mastermind_JAE2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mastermind_JAE2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EADB6F1F23CCAAFA00FD0CAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				EADB6F1F23CCAAFA00FD0CAB /* AppDelegate.swift */,
 				EADB6F2123CCAAFA00FD0CAB /* ViewController.swift */,
 				EADB6F2323CCAAFA00FD0CAB /* Main.storyboard */,
+				44B8DC0A23D0A54800D6F8C4 /* PopUpViewController.swift */,
 				EA7A754B23CCB11600CB6766 /* TeamClass.swift */,
 				EADB6F2623CCAAFD00FD0CAB /* Assets.xcassets */,
 				EADB6F2823CCAAFD00FD0CAB /* LaunchScreen.storyboard */,
@@ -262,6 +265,7 @@
 				EA7A754C23CCB11600CB6766 /* TeamClass.swift in Sources */,
 				EADB6F2223CCAAFA00FD0CAB /* ViewController.swift in Sources */,
 				EADB6F2023CCAAFA00FD0CAB /* AppDelegate.swift in Sources */,
+				44B8DC0B23D0A54800D6F8C4 /* PopUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
