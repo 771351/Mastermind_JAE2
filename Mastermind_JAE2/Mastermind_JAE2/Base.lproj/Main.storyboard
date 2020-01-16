@@ -17,7 +17,7 @@
                     <view key="view" contentMode="scaleToFill" id="A8v-Do-S6k">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.10865502804517746" green="0.65579104423522949" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.46582472324371338" green="0.6638978123664856" blue="0.98349243402481079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="lrT-dk-9Fg"/>
                     </view>
                 </viewController>
@@ -32,7 +32,22 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<<<<<<< Updated upstream
                         <color key="backgroundColor" red="0.10516543881593576" green="0.6566781199210967" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+=======
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQO-3n-OLu">
+                                <rect key="frame" x="321" y="505" width="193" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Create New Team"/>
+                                <connections>
+                                    <action selector="showPopUP:" destination="BYZ-38-t0r" eventType="touchUpInside" id="No3-ON-d9t"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.46188348531723022" green="0.65996503829956055" blue="0.97955828905105591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+>>>>>>> Stashed changes
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
