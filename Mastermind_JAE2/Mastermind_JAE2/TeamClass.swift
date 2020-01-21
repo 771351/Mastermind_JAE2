@@ -73,5 +73,7 @@ class teamClass {
         
         self.everyGuess = everyGuess + gameGuess
         self.aver = (everyGuess / gamesP)
+ 
     }
+    
 }
