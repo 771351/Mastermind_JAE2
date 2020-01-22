@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Game Page-->
         <scene sceneID="wre-pj-1hX">
             <objects>
-                <viewController id="GIU-bG-cmC" sceneMemberID="viewController">
+                <viewController title="Game Page" id="GIU-bG-cmC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jfp-LR-4ev">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,6 +25,9 @@
                                 <state key="normal" title="Back to Home">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="bwc-th-Vdw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hol-ED-wc4">
                                 <rect key="frame" x="741" y="83" width="73" height="58"/>
@@ -339,12 +342,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XTn-HT-4Rn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="633.8129496402878" y="-1487.0503597122304"/>
+            <point key="canvasLocation" x="18" y="-685"/>
         </scene>
-        <!--View Controller-->
+        <!--Stats Page-->
         <scene sceneID="U40-nH-8sy">
             <objects>
-                <viewController id="5Ot-Vp-APe" sceneMemberID="viewController">
+                <viewController title="Stats Page" id="5Ot-Vp-APe" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A8v-Do-S6k">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -363,6 +366,9 @@
                                 <state key="normal" title="Return Home">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Eiw-X1-rQB"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LeaderBoard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLL-GC-clc">
                                 <rect key="frame" x="299" y="230" width="255" height="64"/>
@@ -641,7 +647,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XXT-04-7M6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="103.59712230215828" y="-653.41726618705036"/>
+            <point key="canvasLocation" x="-599" y="-1440"/>
         </scene>
         <!--Pop Up View Controller-->
         <scene sceneID="T2W-IB-xfd">
@@ -688,12 +694,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9x7-Vh-SYD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1129.4964028776978" y="-243.34532374100721"/>
+            <point key="canvasLocation" x="-1281" y="53"/>
         </scene>
-        <!--View Controller-->
+        <!--Home Page-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Mastermind_JAE2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Home Page" id="BYZ-38-t0r" customClass="ViewController" customModule="Mastermind_JAE2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -707,6 +713,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="5Ot-Vp-APe" kind="show" id="Ans-0O-iNS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="inK-wk-y9V">
                                 <rect key="frame" x="70" y="926" width="285" height="99"/>
@@ -739,6 +748,18 @@
                                     <action selector="showPopUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ll5-Nh-g4g"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A43-r3-c9B">
+                                <rect key="frame" x="387" y="713" width="63" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="PLAY">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="GIU-bG-cmC" kind="show" id="9jm-E0-Uc0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.46582472320000001" green="0.66389781240000001" blue="0.98349243399999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -746,7 +767,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="279.85611510791369" y="236.87050359712231"/>
+            <point key="canvasLocation" x="-1281" y="-653"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="bwc-th-Vdw"/>
+    </inferredMetricsTieBreakers>
 </document>
