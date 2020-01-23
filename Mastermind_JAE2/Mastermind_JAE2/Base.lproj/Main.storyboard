@@ -649,6 +649,55 @@
             </objects>
             <point key="canvasLocation" x="-599" y="-1440"/>
         </scene>
+        <!--Third Pop Up View Controller-->
+        <scene sceneID="cO7-xU-pU8">
+            <objects>
+                <viewController storyboardIdentifier="sbTPopUpID" id="1uH-ro-d2z" customClass="ThirdPopUpViewController" customModule="Mastermind_JAE2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MoB-eG-bXB">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sga-gr-Efa">
+                                <rect key="frame" x="192" y="322" width="450" height="468"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rules" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32q-hq-PLS">
+                                        <rect key="frame" x="132" y="108" width="186" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.026603650409999999" green="0.78841483160000003" blue="0.096763266749999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="468" id="lMJ-yf-3bW"/>
+                                    <constraint firstAttribute="height" constant="468" id="suA-1B-14p"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="450" id="uB3-vX-BgE"/>
+                                    <constraint firstAttribute="width" constant="450" id="zGg-xN-UMH"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yL4-uU-W4T">
+                                <rect key="frame" x="351" y="699" width="133" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="closePopUp:" destination="1uH-ro-d2z" eventType="touchUpInside" id="Wsb-VN-zQe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sga-gr-Efa" firstAttribute="centerY" secondItem="MoB-eG-bXB" secondAttribute="centerY" id="Nqc-vz-vpk"/>
+                            <constraint firstItem="sga-gr-Efa" firstAttribute="centerX" secondItem="MoB-eG-bXB" secondAttribute="centerX" id="tFF-hc-KkG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="y6B-5S-0ti"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T1x-wZ-4Yy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1927.3381294964031" y="57.733812949640289"/>
+        </scene>
         <!--Pop Up View Controller-->
         <scene sceneID="T2W-IB-xfd">
             <objects>
@@ -668,7 +717,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.84221527620000003" green="0.6922689138" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.026603650412975348" green="0.78841483160621761" blue="0.096763266754629942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="468" id="aFm-4V-D13"/>
                                     <constraint firstAttribute="width" constant="450" id="zxi-C4-MGr"/>
@@ -695,6 +744,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9x7-Vh-SYD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1281" y="53"/>
+        </scene>
+        <!--Second Pop Up View Controller-->
+        <scene sceneID="cMI-aT-oky">
+            <objects>
+                <viewController storyboardIdentifier="sbSPopUpID" id="VkW-Ae-T10" customClass="SecondPopUpViewController" customModule="Mastermind_JAE2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y9v-Fi-FEO">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5mW-8n-jhQ">
+                                <rect key="frame" x="192" y="322" width="450" height="468"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kfl-oz-WB0">
+                                        <rect key="frame" x="163" y="380" width="124" height="47"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                        <state key="normal" title="Close"/>
+                                        <connections>
+                                            <action selector="closePopUP:" destination="VkW-Ae-T10" eventType="touchUpInside" id="Rmk-ZY-0cX"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Timer and more!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M80-yD-fdV">
+                                        <rect key="frame" x="132" y="71" width="186" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.026603650409999999" green="0.78841483160000003" blue="0.096763266749999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="450" id="AQ3-Ix-j5B"/>
+                                    <constraint firstAttribute="height" constant="468" id="UsX-GR-0kD"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="450" id="a5y-By-jHg"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="468" id="zjM-DL-j0n"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5mW-8n-jhQ" firstAttribute="centerY" secondItem="Y9v-Fi-FEO" secondAttribute="centerY" id="cRr-Er-Axb"/>
+                            <constraint firstItem="5mW-8n-jhQ" firstAttribute="centerX" secondItem="Y9v-Fi-FEO" secondAttribute="centerX" id="w0k-4L-9Wq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6er-Mi-89T"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nBG-Rs-N1u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-579.13669064748206" y="56.654676258992808"/>
         </scene>
         <!--Home Page-->
         <scene sceneID="tne-QT-ifu">
@@ -723,6 +821,9 @@
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="80"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Settings"/>
+                                <connections>
+                                    <action selector="showSPopUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hBg-of-fen"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mastermind" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVY-UQ-9f9">
                                 <rect key="frame" x="199" y="68" width="436" height="104"/>
@@ -738,6 +839,9 @@
                                 <state key="normal" title="?">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="showTPopUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NCy-v1-BB1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQv-je-K2e">
                                 <rect key="frame" x="295" y="610" width="244" height="85"/>
