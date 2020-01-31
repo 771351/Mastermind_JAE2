@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIViewController, UIPickerViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,19 +24,29 @@ class ViewController: UIViewController {
         popOverVC.didMove(toParent: self)
     }
     
-    @IBAction func showSPopUp(_ sender: UIButton) {
+    
+    
+    
+    
+    
+    
+    
+@IBAction func showSPopUp(_ sender: UIButton) {
         let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbSPopUpID") as! SecondPopUpViewController
         self.addChild(popOverVC)
         popOverVC.view.frame = self.view.frame
-        self.view.addSubview(popOverVC.view)
-        popOverVC.didMove(toParent: self)
+    self.view.addSubview(popOverVC.view)   popOverVC.didMove(toParent: self)
     }
-    @IBAction func showTPopUp(_ sender: UIButton) {
+@IBAction func showTPopUp(_ sender: UIButton) {
         let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbTPopUpID") as! ThirdPopUpViewController
         self.addChild(popOverVC)
         popOverVC.view.frame = self.view.frame
         self.view.addSubview(popOverVC.view)
         popOverVC.didMove(toParent: self)
     }
+    
+    @IBAction func sned(_ sender: UIButton){
+        var hold = 
+    var arrnum = [0,1,2,3,4,5,6,7,8,9]
+    }
 }
-
