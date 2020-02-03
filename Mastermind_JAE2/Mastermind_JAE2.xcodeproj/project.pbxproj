@@ -11,6 +11,7 @@
 		44B8DC0B23D0A54800D6F8C4 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8DC0A23D0A54800D6F8C4 /* PopUpViewController.swift */; };
 		44F649E323D9D85F003A82F6 /* ThirdPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F649E223D9D85F003A82F6 /* ThirdPopUpViewController.swift */; };
 		7923203523E46C91009FD2FE /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7923203423E46C91009FD2FE /* CloudKit.framework */; };
+		79CF8AE923E85F9A00AEE58A /* GameClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CF8AE823E85F9A00AEE58A /* GameClass.swift */; };
 		EA7A754C23CCB11600CB6766 /* TeamClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A754B23CCB11600CB6766 /* TeamClass.swift */; };
 		EADB6F2023CCAAFA00FD0CAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADB6F1F23CCAAFA00FD0CAB /* AppDelegate.swift */; };
 		EADB6F2223CCAAFA00FD0CAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADB6F2123CCAAFA00FD0CAB /* ViewController.swift */; };
@@ -44,6 +45,7 @@
 		44F649E223D9D85F003A82F6 /* ThirdPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPopUpViewController.swift; sourceTree = "<group>"; };
 		7923203223E46C31009FD2FE /* Mastermind_JAE2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mastermind_JAE2.entitlements; sourceTree = "<group>"; };
 		7923203423E46C91009FD2FE /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		79CF8AE823E85F9A00AEE58A /* GameClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameClass.swift; sourceTree = "<group>"; };
 		EA7A754B23CCB11600CB6766 /* TeamClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamClass.swift; sourceTree = "<group>"; };
 		EADB6F1C23CCAAFA00FD0CAB /* Mastermind_JAE2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mastermind_JAE2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EADB6F1F23CCAAFA00FD0CAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,10 +124,11 @@
 				EADB6F1F23CCAAFA00FD0CAB /* AppDelegate.swift */,
 				EADB6F2123CCAAFA00FD0CAB /* ViewController.swift */,
 				EADB6F2323CCAAFA00FD0CAB /* Main.storyboard */,
+				79CF8AE823E85F9A00AEE58A /* GameClass.swift */,
+				EA7A754B23CCB11600CB6766 /* TeamClass.swift */,
 				44F649E223D9D85F003A82F6 /* ThirdPopUpViewController.swift */,
 				4450946123D88D3000CE3B21 /* SecondPopUpViewController.swift */,
 				44B8DC0A23D0A54800D6F8C4 /* PopUpViewController.swift */,
-				EA7A754B23CCB11600CB6766 /* TeamClass.swift */,
 				EADB6F2623CCAAFD00FD0CAB /* Assets.xcassets */,
 				EADB6F2823CCAAFD00FD0CAB /* LaunchScreen.storyboard */,
 				EADB6F2B23CCAAFD00FD0CAB /* Info.plist */,
@@ -282,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79CF8AE923E85F9A00AEE58A /* GameClass.swift in Sources */,
 				EA7A754C23CCB11600CB6766 /* TeamClass.swift in Sources */,
 				EADB6F2223CCAAFA00FD0CAB /* ViewController.swift in Sources */,
 				4450946223D88D3000CE3B21 /* SecondPopUpViewController.swift in Sources */,
