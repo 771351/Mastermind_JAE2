@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="ipad10_5" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,7 +11,7 @@
         <!--Game Page-->
         <scene sceneID="wre-pj-1hX">
             <objects>
-                <viewController title="Game Page" modalPresentationStyle="fullScreen" id="GIU-bG-cmC" sceneMemberID="viewController">
+                <viewController title="Game Page" modalPresentationStyle="fullScreen" id="GIU-bG-cmC" customClass="GamePageViewController" customModule="Mastermind_JAE2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jfp-LR-4ev">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -313,17 +313,24 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5ls-C0-5qe">
-                                <rect key="frame" x="82" y="68" width="459" height="89"/>
+                                <rect key="frame" x="211" y="68" width="459" height="89"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="GIU-bG-cmC" id="H6o-YS-VKB"/>
+                                    <outlet property="delegate" destination="GIU-bG-cmC" id="xsw-te-Zwh"/>
+                                </connections>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.46582472320000001" green="0.66389781240000001" blue="0.98349243399999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="7R8-qF-WB2"/>
                     </view>
+                    <connections>
+                        <outlet property="pickerView" destination="5ls-C0-5qe" id="67v-aL-7Hz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XTn-HT-4Rn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="17.985611510791369" y="-685.25179856115108"/>
+            <point key="canvasLocation" x="205" y="-710"/>
         </scene>
         <!--Stats Page-->
         <scene sceneID="U40-nH-8sy">
@@ -633,7 +640,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fS5-gc-nmf">
                                         <rect key="frame" x="14" y="89" width="422" height="290"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <mutableString key="text">1) Maximum of 8 guesses to guess a 3 digit answer    2) The answer will have no repeated numbers                 3) When a team fails to correctly guess a number, a 10 will be added to their average for that game           4) After each guess, clues will appear to the right side of the guess. Filled in black circles will appear for guesses that are a correct number that is in the right spot, open circles will appear for guesses that are a correct number but not in the correct spot.                                              5) Clues always appear with the filled in circles first followed by the open circles</mutableString>
+                                        <string key="text">1) Maximum of 8 guesses to guess a 3 digit answer    2) The answer will have no repeated numbers                 3) When a team fails to correctly guess a number, a 10 will be added to their average for that game           4) After each guess, clues will appear to the right side of the guess. Filled in black circles will appear for guesses that are a correct number that is in the right spot, open circles will appear for guesses that are a correct number but not in the correct spot.                                              5) Clues always appear with the filled in circles first followed by the open circles</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
