@@ -10,13 +10,14 @@ import UIKit
 
 class GamePageViewController: UIViewController, UIPickerViewDataSource,UIPickerViewDelegate {
 
+    @IBOutlet weak var label : UILabel!
     @IBOutlet weak var pickerView: UIPickerView!
-    var hold = ""
+    
     
     let nums = ["0","1","2","3","4","5","6","7","8","9"]
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 3
+        return 1
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return nums[row]
@@ -24,10 +25,9 @@ class GamePageViewController: UIViewController, UIPickerViewDataSource,UIPickerV
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return nums.count
     }
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        hold = nums[row]
-    }
+   
     
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
