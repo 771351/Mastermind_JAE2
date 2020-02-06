@@ -21,7 +21,19 @@ class GameClass{
     }
 
 func newAnswer() {
-   
-    
+   firstAnswer = Int.random(in: 0..<9)
+   secondAnswer = Int.random(in: 0..<9)
+    while (firstAnswer == secondAnswer)
+    {
+        secondAnswer = Int.random(in: 0..<9)
+    }
+   thirdAnswer = Int.random(in: 0..<9)
+    while (firstAnswer == thirdAnswer || secondAnswer == thirdAnswer)
+    {
+        thirdAnswer = Int.random(in: 0..<9)
+    }
+  
 }
+    
+    
 }
