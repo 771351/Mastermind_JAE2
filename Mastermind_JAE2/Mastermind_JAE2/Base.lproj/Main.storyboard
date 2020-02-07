@@ -325,6 +325,9 @@
                         <viewLayoutGuide key="safeArea" id="7R8-qF-WB2"/>
                     </view>
                     <connections>
+                        <outlet property="guess1num1" destination="Taj-IL-wfE" id="bR4-fx-idP"/>
+                        <outlet property="guess1num2" destination="ueA-Ug-M7E" id="HLE-JS-8iP"/>
+                        <outlet property="guess1num3" destination="mIj-8r-E36" id="9fw-0w-mkE"/>
                         <outlet property="pickerView" destination="5ls-C0-5qe" id="67v-aL-7Hz"/>
                     </connections>
                 </viewController>

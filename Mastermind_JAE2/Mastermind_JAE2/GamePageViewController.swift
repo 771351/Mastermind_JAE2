@@ -11,23 +11,39 @@ import UIKit
 class GamePageViewController: UIViewController, UIPickerViewDataSource,UIPickerViewDelegate {
 
     @IBOutlet weak var pickerView: UIPickerView!
-    var hold = ""
+    @IBOutlet weak var guess1num1: UILabel!
+    @IBOutlet weak var guess1num2: UILabel!
+    @IBOutlet weak var guess1num3: UILabel!
     
-    let nums = ["0","1","2","3","4","5","6","7","8","9"]
+    var nums = [["0","1","2","3","4","5","6","7","8","9"],["0","1","2","3","4","5","6","7","8","9"],["0","1","2","3","4","5","6","7","8","9"]]
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 3
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return nums[row]
+        return nums[component][row]
     }
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return nums.count
+        return nums[component].count
     }
+    var x = "0"
+    var y = "0"
+    var z = "0"
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        hold = nums[row]
+       
+        if  component == 0 {
+            guess1num1.text = nums[component][row]
+            x = nums[component][row]
+        }
+        if component == 1 {
+            guess1num2.text = nums[component][row]
+            y = nums[component][row]
+        }
+        if component == 2 {
+            guess1num3.text = nums[component][row]
+            z = nums[component][row]
+        }
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
