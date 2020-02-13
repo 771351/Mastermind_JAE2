@@ -14,7 +14,7 @@
 		79CF8AE923E85F9A00AEE58A /* GameClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CF8AE823E85F9A00AEE58A /* GameClass.swift */; };
 		79D8421C23EC4F2000E95F89 /* StatsClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D8421B23EC4F2000E95F89 /* StatsClass.swift */; };
 		EA7A754C23CCB11600CB6766 /* TeamClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A754B23CCB11600CB6766 /* TeamClass.swift */; };
-		EA7A9BCF23E9ABC100B361AF /* pickerviewclass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A9BCE23E9ABC100B361AF /* pickerviewclass.swift */; };
+		EA7A9BCF23E9ABC100B361AF /* GamePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A9BCE23E9ABC100B361AF /* GamePageViewController.swift */; };
 		EADB6F2023CCAAFA00FD0CAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADB6F1F23CCAAFA00FD0CAB /* AppDelegate.swift */; };
 		EADB6F2223CCAAFA00FD0CAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADB6F2123CCAAFA00FD0CAB /* ViewController.swift */; };
 		EADB6F2523CCAAFA00FD0CAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EADB6F2323CCAAFA00FD0CAB /* Main.storyboard */; };
@@ -50,7 +50,7 @@
 		79CF8AE823E85F9A00AEE58A /* GameClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameClass.swift; sourceTree = "<group>"; };
 		79D8421B23EC4F2000E95F89 /* StatsClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsClass.swift; sourceTree = "<group>"; };
 		EA7A754B23CCB11600CB6766 /* TeamClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamClass.swift; sourceTree = "<group>"; };
-		EA7A9BCE23E9ABC100B361AF /* pickerviewclass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pickerviewclass.swift; sourceTree = "<group>"; };
+		EA7A9BCE23E9ABC100B361AF /* GamePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePageViewController.swift; sourceTree = "<group>"; };
 		EADB6F1C23CCAAFA00FD0CAB /* Mastermind_JAE2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mastermind_JAE2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EADB6F1F23CCAAFA00FD0CAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EADB6F2123CCAAFA00FD0CAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,7 +126,7 @@
 			children = (
 				7923203223E46C31009FD2FE /* Mastermind_JAE2.entitlements */,
 				EADB6F1F23CCAAFA00FD0CAB /* AppDelegate.swift */,
-				EA7A9BCE23E9ABC100B361AF /* pickerviewclass.swift */,
+				EA7A9BCE23E9ABC100B361AF /* GamePageViewController.swift */,
 				EADB6F2123CCAAFA00FD0CAB /* ViewController.swift */,
 				EADB6F2323CCAAFA00FD0CAB /* Main.storyboard */,
 				79CF8AE823E85F9A00AEE58A /* GameClass.swift */,
@@ -299,7 +299,7 @@
 				EADB6F2023CCAAFA00FD0CAB /* AppDelegate.swift in Sources */,
 				44B8DC0B23D0A54800D6F8C4 /* PopUpViewController.swift in Sources */,
 				44F649E323D9D85F003A82F6 /* ThirdPopUpViewController.swift in Sources */,
-				EA7A9BCF23E9ABC100B361AF /* pickerviewclass.swift in Sources */,
+				EA7A9BCF23E9ABC100B361AF /* GamePageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
