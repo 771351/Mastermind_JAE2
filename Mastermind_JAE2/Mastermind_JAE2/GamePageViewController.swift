@@ -37,6 +37,7 @@ class GamePageViewController: UIViewController, UIPickerViewDataSource,UIPickerV
     @IBOutlet weak var num8guess3: UILabel!
     
     
+    
     var guesses = [["","",""],["","",""],["","",""],["","",""],["","",""],["","",""],["","",""],["","",""],["","",""]]
     
     let nums = [["0","1","2","3","4","5","6","7","8","9"],["0","1","2","3","4","5","6","7","8","9"],["0","1","2","3","4","5","6","7","8","9"]]
@@ -53,11 +54,55 @@ class GamePageViewController: UIViewController, UIPickerViewDataSource,UIPickerV
     var count = 0
 
     @IBAction func goButton(_ sender: Any) {
+       
         if guesses[count][0] != "" && guesses[count][1] != "" && guesses[count][2] != "" && count < 8
         {
          
         count = count + 1
     }
+        if count == 8
+        {
+            for row in (0...7)
+                {
+                for col in (0...2)
+                    {
+                        let nothing = ""
+                            guesses[row][col] = nothing
+                    }
+                                      
+                }
+                num1guess1.text = ""
+                num1guess2.text = ""
+                num1guess3.text = ""
+                num2guess1.text = ""
+                num2guess2.text = ""
+                num2guess3.text = ""
+                num3guess1.text = ""
+                num3guess2.text = ""
+                num3guess3.text = ""
+                num4guess1.text = ""
+                num4guess2.text = ""
+                num4guess3.text = ""
+                num5guess1.text = ""
+                num5guess2.text = ""
+                num5guess3.text = ""
+                num6guess1.text = ""
+                num6guess2.text = ""
+                num6guess3.text = ""
+                num7guess1.text = ""
+                num7guess2.text = ""
+                num7guess3.text = ""
+                num8guess1.text = ""
+                num8guess2.text = ""
+                num8guess3.text = ""
+            count = 0 
+            let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbGPopUpID") as! GamePopUpViewController
+                   self.addChild(popOverVC)
+                   popOverVC.view.frame = self.view.frame
+                   self.view.addSubview(popOverVC.view)
+                   popOverVC.didMove(toParent: self)
+            
+        }
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if count == 0{
@@ -207,8 +252,38 @@ class GamePageViewController: UIViewController, UIPickerViewDataSource,UIPickerV
                 guesses[7][2] = nums[component][row]
                
             }
+            
         
             }
+        
+        if count == 8
+        {
+            
+            num1guess1.text = ""
+            num1guess2.text = ""
+            num1guess3.text = ""
+            num2guess1.text = ""
+            num2guess2.text = ""
+            num2guess3.text = ""
+            num3guess1.text = ""
+            num3guess2.text = ""
+            num3guess3.text = ""
+            num4guess1.text = ""
+            num4guess2.text = ""
+            num4guess3.text = ""
+            num5guess1.text = ""
+            num5guess2.text = ""
+            num5guess3.text = ""
+            num6guess1.text = ""
+            num6guess2.text = ""
+            num6guess3.text = ""
+            num7guess1.text = ""
+            num7guess2.text = ""
+            num7guess3.text = ""
+            num8guess1.text = ""
+            num8guess2.text = ""
+            num8guess3.text = ""
+        }
         
     }
     override func viewDidLoad() {

@@ -367,6 +367,53 @@
             </objects>
             <point key="canvasLocation" x="450" y="-692"/>
         </scene>
+        <!--Game Pop Up View Controller-->
+        <scene sceneID="fOU-CE-9XG">
+            <objects>
+                <viewController storyboardIdentifier="sbGPopUpID" id="yAR-so-Upv" customClass="GamePopUpViewController" customModule="Mastermind_JAE2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AmI-1a-fAc">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eut-Jj-dEE">
+                                <rect key="frame" x="182" y="300" width="470" height="512"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="YOU LOSE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBg-Lq-GCv">
+                                        <rect key="frame" x="126" y="117" width="219" height="83"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="47"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eL7-Dt-Q2H">
+                                        <rect key="frame" x="170" y="392" width="130" height="64"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                        <state key="normal" title="CLOSE"/>
+                                        <connections>
+                                            <action selector="closePopUp:" destination="yAR-so-Upv" eventType="touchUpInside" id="TsY-9e-3Lo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="512" id="Rjl-5C-FeF"/>
+                                    <constraint firstAttribute="width" constant="470" id="axM-dN-f0l"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="eut-Jj-dEE" firstAttribute="centerX" secondItem="AmI-1a-fAc" secondAttribute="centerX" id="Uok-HZ-RVx"/>
+                            <constraint firstItem="eut-Jj-dEE" firstAttribute="centerY" secondItem="AmI-1a-fAc" secondAttribute="centerY" id="oJ7-Jt-5Kp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4zU-xz-94M"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7W8-2I-foj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1116.5467625899282" y="-692.26618705035969"/>
+        </scene>
         <!--Stats Page-->
         <scene sceneID="U40-nH-8sy">
             <objects>
