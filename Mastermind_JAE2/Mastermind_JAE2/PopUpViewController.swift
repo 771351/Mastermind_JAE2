@@ -32,4 +32,9 @@ class PopUpViewController: UIViewController {
     }
     */
 
+    @IBOutlet weak var newteamNAME: UITextField!
+    lazy var newEnteredName = newteamNAME.text
+    lazy var newTeam = teamClass (name: newEnteredName!)
+
 }
+
