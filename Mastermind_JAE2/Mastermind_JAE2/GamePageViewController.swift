@@ -36,7 +36,80 @@ class GamePageViewController: UIViewController, UIPickerViewDataSource,UIPickerV
     @IBOutlet weak var num8guess2: UILabel!
     @IBOutlet weak var num8guess3: UILabel!
     
+    @IBOutlet weak var Answer1: UILabel!
+    @IBOutlet weak var Answer2: UILabel!
+    @IBOutlet weak var Answer3: UILabel!
+    @IBOutlet weak var Answer4: UILabel!
+    @IBOutlet weak var Answer5: UILabel!
+    @IBOutlet weak var Answer6: UILabel!
+    @IBOutlet weak var Answer7: UILabel!
+    @IBOutlet weak var Answer8: UILabel!
     
+    
+    var firstA = ""
+    var secondA = ""
+    var thirdA = ""
+    var numOfGuesses = 0
+    
+    func CorrectAnswer()
+    {
+        let firstAnswer = Int.random(in: 0 ... 9 )
+            var secondAnswer = Int.random(in: 0 ... 9)
+            var thirdAnswer = Int.random(in: 0 ... 9)
+                    
+            while firstAnswer == secondAnswer
+                {
+                    secondAnswer = Int.random(in: 0 ... 9)
+                }
+                         
+            while firstAnswer == thirdAnswer || secondAnswer == thirdAnswer
+                {
+                    thirdAnswer = Int.random(in: 0 ... 9)
+                }
+                    firstA = String(firstAnswer)
+                    secondA = String(secondAnswer)
+                    thirdA = String(thirdAnswer)
+
+    }
+    
+    func CorrectPlacement(array:[String]) -> String
+    {
+        var string = ""
+        let correct = "+"
+            if (array[0] == firstA)
+            {
+                string = string + correct
+            }
+            if (array[1] == secondA)
+            {
+                 string = string + correct
+            }
+            if (array[2] == thirdA)
+            {
+                 string = string + correct
+            }
+        return string
+    }
+    
+    func CorrectNumber(array:[String]) -> String
+    {
+        var string = ""
+        let correct = "O"
+            if (array[0] == secondA || array[0] == thirdA )
+            {
+                string = string + correct
+                
+            }
+            if (array[1] == firstA || array[1] == thirdA)
+            {
+                string = string + correct
+            }
+            if (array[2] == firstA || array[2] == secondA)
+            {
+                string = string + correct
+            }
+        return string
+    }
     
     var guesses = [["","",""],["","",""],["","",""],["","",""],["","",""],["","",""],["","",""],["","",""],["","",""]]
     
@@ -54,13 +127,56 @@ class GamePageViewController: UIViewController, UIPickerViewDataSource,UIPickerV
     var count = 0
 
     @IBAction func goButton(_ sender: Any) {
-       
+        
+        print(firstA + secondA + thirdA)
+        
+        
         if guesses[count][0] != "" && guesses[count][1] != "" && guesses[count][2] != "" && count < 8
-        {
+{
          
         count = count + 1
-    }
-        if count == 8
+            
+            if count == 1
+                   {
+                       Answer1.text = CorrectPlacement(array: guesses[0]) + CorrectNumber(array: guesses[0])
+                   }
+            if count == 2
+                   {
+                       Answer2.text = CorrectPlacement(array: guesses[1]) + CorrectNumber(array: guesses[1])
+                   }
+            if count == 3
+                   {
+                          Answer3.text = CorrectPlacement(array: guesses[2]) + CorrectNumber(array: guesses[2])
+                   }
+            if count == 4
+                   {
+                          Answer4.text = CorrectPlacement(array: guesses[3]) + CorrectNumber(array: guesses[3])
+                   }
+            if count == 5
+                   {
+                          Answer5.text = CorrectPlacement(array: guesses[4]) + CorrectNumber(array: guesses[4])
+                   }
+            if count == 6
+                   {
+                          Answer6.text = CorrectPlacement(array: guesses[5]) + CorrectNumber(array: guesses[5])
+                   }
+            if count == 7
+                   {
+                          Answer7.text = CorrectPlacement(array: guesses[6]) + CorrectNumber(array: guesses[6])
+                   }
+            if count == 8
+                   {
+                          Answer8.text = CorrectPlacement(array: guesses[7]) + CorrectNumber(array: guesses[7])
+                   }
+            
+}
+        
+        if (Answer1.text == "+++" || Answer2.text == "+++" || Answer3.text == "+++" || Answer4.text == "+++" || Answer5.text == "+++" || Answer6.text == "+++" || Answer7.text == "+++" || Answer8.text == "+++" )
+                     {
+                         count = 9
+                     }
+        
+        if count >= 8
         {
             for row in (0...7)
                 {
@@ -95,14 +211,37 @@ class GamePageViewController: UIViewController, UIPickerViewDataSource,UIPickerV
                 num8guess1.text = ""
                 num8guess2.text = ""
                 num8guess3.text = ""
-            count = 0 
-            let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbGPopUpID") as! GamePopUpViewController
+                Answer1.text = ""
+                Answer2.text = ""
+                Answer3.text = ""
+                Answer4.text = ""
+                Answer5.text = ""
+                Answer6.text = ""
+                Answer7.text = ""
+                Answer8.text = ""
+            if count == 8
+            {
+                count = 0
+                CorrectAnswer()
+            let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbLPopUpID") as! GamePopUpViewController
                    self.addChild(popOverVC)
                    popOverVC.view.frame = self.view.frame
                    self.view.addSubview(popOverVC.view)
                    popOverVC.didMove(toParent: self)
-            
+            }
+            if count == 9
+            {
+                CorrectAnswer()
+                count = 0
+                let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbWPopUpID") as! WGamePopUpViewController
+                self.addChild(popOverVC)
+                popOverVC.view.frame = self.view.frame
+                self.view.addSubview(popOverVC.view)
+                popOverVC.didMove(toParent: self)
+            }
         }
+        
+        
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if count == 0{
@@ -120,6 +259,7 @@ class GamePageViewController: UIViewController, UIPickerViewDataSource,UIPickerV
             guesses[0][2] = nums[component][row]
          
         }
+            
         //second row
         }
         if count == 1{
@@ -289,6 +429,7 @@ class GamePageViewController: UIViewController, UIPickerViewDataSource,UIPickerV
     override func viewDidLoad() {
         super.viewDidLoad()
 
+          CorrectAnswer()
         // Do any additional setup after loading the view.
     }
     
