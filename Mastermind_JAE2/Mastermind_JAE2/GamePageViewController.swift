@@ -75,7 +75,7 @@ class GamePageViewController: UIViewController, UIPickerViewDataSource,UIPickerV
     func CorrectPlacement(array:[String]) -> String
     {
         var string = ""
-        let correct = "+"
+        let correct = "●"
             if (array[0] == firstA)
             {
                 string = string + correct
@@ -94,7 +94,7 @@ class GamePageViewController: UIViewController, UIPickerViewDataSource,UIPickerV
     func CorrectNumber(array:[String]) -> String
     {
         var string = ""
-        let correct = "O"
+        let correct = "○"
             if (array[0] == secondA || array[0] == thirdA )
             {
                 string = string + correct
@@ -171,7 +171,7 @@ class GamePageViewController: UIViewController, UIPickerViewDataSource,UIPickerV
             
 }
         
-        if (Answer1.text == "+++" || Answer2.text == "+++" || Answer3.text == "+++" || Answer4.text == "+++" || Answer5.text == "+++" || Answer6.text == "+++" || Answer7.text == "+++" || Answer8.text == "+++" )
+        if (Answer1.text == "●●●" || Answer2.text == "●●●" || Answer3.text == "●●●" || Answer4.text == "●●●" || Answer5.text == "●●●" || Answer6.text == "●●●" || Answer7.text == "●●●" || Answer8.text == "●●●" )
                      {
                          count = 9
                      }
@@ -241,8 +241,56 @@ class GamePageViewController: UIViewController, UIPickerViewDataSource,UIPickerV
             }
         }
         
+    }
+    @IBAction func clearButton(_ sender: Any) {
+        
+        for row in (0...7)
+                       {
+                       for col in (0...2)
+                           {
+                               let nothing = ""
+                                   guesses[row][col] = nothing
+                           }
+                                             
+                       }
+                       num1guess1.text = ""
+                       num1guess2.text = ""
+                       num1guess3.text = ""
+                       num2guess1.text = ""
+                       num2guess2.text = ""
+                       num2guess3.text = ""
+                       num3guess1.text = ""
+                       num3guess2.text = ""
+                       num3guess3.text = ""
+                       num4guess1.text = ""
+                       num4guess2.text = ""
+                       num4guess3.text = ""
+                       num5guess1.text = ""
+                       num5guess2.text = ""
+                       num5guess3.text = ""
+                       num6guess1.text = ""
+                       num6guess2.text = ""
+                       num6guess3.text = ""
+                       num7guess1.text = ""
+                       num7guess2.text = ""
+                       num7guess3.text = ""
+                       num8guess1.text = ""
+                       num8guess2.text = ""
+                       num8guess3.text = ""
+                       Answer1.text = ""
+                       Answer2.text = ""
+                       Answer3.text = ""
+                       Answer4.text = ""
+                       Answer5.text = ""
+                       Answer6.text = ""
+                       Answer7.text = ""
+                       Answer8.text = ""
+        count = 0
+        CorrectAnswer()
         
     }
+    
+    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if count == 0{
               if component == 0  {
