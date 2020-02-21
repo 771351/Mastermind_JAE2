@@ -42,6 +42,25 @@ class teamClass {
         self.everyGuess = 0
     }
     
+    
+    func changename(name: String){
+        
+        self.teamName = name
+    }
+    func changegamesP(){
+        self.gamesP = self.gamesP + 1
+    }
+    func changegamesW(){
+           self.gamesW = self.gamesW + 1
+       }
+    func changegamesL(){
+           self.gamesL = self.gamesL + 1
+       }
+    func changeaver(){
+        self.aver = self.everyGuess/self.gamesP
+          }
+    
+    
     func gameDONE(gamesP: Int, aver: Int, gameGuess: Int){
         
         self.gamesP = gamesP+1
