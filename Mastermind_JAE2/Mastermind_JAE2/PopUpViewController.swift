@@ -9,7 +9,8 @@
 import UIKit
 
 class PopUpViewController: UIViewController {
-    
+   
+  
 var Team1 = teamClass (name: "xxxxxx")
 var Team2 = teamClass (name: "xxxxxx")
 var Team3 = teamClass (name: "xxxxxx")

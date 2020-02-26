@@ -1017,6 +1017,10 @@
                                     <action selector="showTPopUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NCy-v1-BB1"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Va-Cl-xv2">
+                                <rect key="frame" x="1" y="347" width="834" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.46582472320000001" green="0.66389781240000001" blue="0.98349243399999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
