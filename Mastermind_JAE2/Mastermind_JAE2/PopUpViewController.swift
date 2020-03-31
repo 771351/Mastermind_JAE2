@@ -34,7 +34,7 @@ class PopUpViewController: UIViewController {
     }
     */
 
-    @IBOutlet weak var newNAME: UITextField!
+    @IBOutlet weak var newteamNAME: UITextField!
     
     @IBAction func goname(_ sender: Any) {
         
