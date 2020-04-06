@@ -8,10 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4450946223D88D3000CE3B21 /* SecondPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4450946123D88D3000CE3B21 /* SecondPopUpViewController.swift */; };
-		44B8DC0B23D0A54800D6F8C4 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8DC0A23D0A54800D6F8C4 /* PopUpViewController.swift */; };
 		44F649E323D9D85F003A82F6 /* ThirdPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F649E223D9D85F003A82F6 /* ThirdPopUpViewController.swift */; };
 		5709905D23F594FC009156FF /* GamePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5709905C23F594FC009156FF /* GamePopUpViewController.swift */; };
-		575EDD9E23FC786300A2256D /* WGamePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575EDD9D23FC786300A2256D /* WGamePopUpViewController.swift */; };
 		7923203523E46C91009FD2FE /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7923203423E46C91009FD2FE /* CloudKit.framework */; };
 		792A47E92419137E00472731 /* TeamObjectClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792A47E82419137E00472731 /* TeamObjectClass.swift */; };
 		79D8421C23EC4F2000E95F89 /* StatsClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D8421B23EC4F2000E95F89 /* StatsClass.swift */; };
@@ -45,10 +43,8 @@
 
 /* Begin PBXFileReference section */
 		4450946123D88D3000CE3B21 /* SecondPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPopUpViewController.swift; sourceTree = "<group>"; };
-		44B8DC0A23D0A54800D6F8C4 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		44F649E223D9D85F003A82F6 /* ThirdPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPopUpViewController.swift; sourceTree = "<group>"; };
 		5709905C23F594FC009156FF /* GamePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePopUpViewController.swift; sourceTree = "<group>"; };
-		575EDD9D23FC786300A2256D /* WGamePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WGamePopUpViewController.swift; sourceTree = "<group>"; };
 		7923203223E46C31009FD2FE /* Mastermind_JAE2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mastermind_JAE2.entitlements; sourceTree = "<group>"; };
 		7923203423E46C91009FD2FE /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		792A47E82419137E00472731 /* TeamObjectClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamObjectClass.swift; sourceTree = "<group>"; };
@@ -133,14 +129,12 @@
 				EA7A9BCE23E9ABC100B361AF /* GamePageViewController.swift */,
 				EADB6F2123CCAAFA00FD0CAB /* ViewController.swift */,
 				EADB6F2323CCAAFA00FD0CAB /* Main.storyboard */,
-				575EDD9D23FC786300A2256D /* WGamePopUpViewController.swift */,
 				5709905C23F594FC009156FF /* GamePopUpViewController.swift */,
 				EA7A754B23CCB11600CB6766 /* TeamClass.swift */,
 				792A47E82419137E00472731 /* TeamObjectClass.swift */,
 				79D8421B23EC4F2000E95F89 /* StatsClass.swift */,
 				44F649E223D9D85F003A82F6 /* ThirdPopUpViewController.swift */,
 				4450946123D88D3000CE3B21 /* SecondPopUpViewController.swift */,
-				44B8DC0A23D0A54800D6F8C4 /* PopUpViewController.swift */,
 				EADB6F2623CCAAFD00FD0CAB /* Assets.xcassets */,
 				EADB6F2823CCAAFD00FD0CAB /* LaunchScreen.storyboard */,
 				EADB6F2B23CCAAFD00FD0CAB /* Info.plist */,
@@ -303,8 +297,6 @@
 				79D8421C23EC4F2000E95F89 /* StatsClass.swift in Sources */,
 				4450946223D88D3000CE3B21 /* SecondPopUpViewController.swift in Sources */,
 				EADB6F2023CCAAFA00FD0CAB /* AppDelegate.swift in Sources */,
-				44B8DC0B23D0A54800D6F8C4 /* PopUpViewController.swift in Sources */,
-				575EDD9E23FC786300A2256D /* WGamePopUpViewController.swift in Sources */,
 				5709905D23F594FC009156FF /* GamePopUpViewController.swift in Sources */,
 				44F649E323D9D85F003A82F6 /* ThirdPopUpViewController.swift in Sources */,
 				EA7A9BCF23E9ABC100B361AF /* GamePageViewController.swift in Sources */,

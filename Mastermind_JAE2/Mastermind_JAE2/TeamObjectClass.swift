@@ -12,7 +12,7 @@ import UIKit
 
 class teamObjectClass
 {
-    
+    //10 teams
 var Team1 = teamClass (name: "xxxxxx")
 var Team2 = teamClass (name: "xxxxxx")
 var Team3 = teamClass (name: "xxxxxx")
@@ -23,11 +23,11 @@ var Team7 = teamClass (name: "xxxxxx")
 var Team8 = teamClass (name: "xxxxxx")
 var Team9 = teamClass (name: "xxxxxx")
 var Team10 = teamClass (name: "xxxxxx")
-
+//list of teams
 lazy var teamlist = [Team1, Team2, Team3, Team4, Team5, Team6, Team7, Team8, Team9, Team10]
     
 
-    
+    //checks if there is a team that doesn't have a name and if there is it updates the team name
     func doesTeamNameWork(newteamNAME : String)
     {
     

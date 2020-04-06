@@ -35,9 +35,9 @@ class PopUpViewController: UIViewController {
     */
 
     @IBOutlet weak var newteamNAME: UITextField!
-    
+//closes pop up and is supposed to send name to TeamObjectClass(NOT FINISHED)
     @IBAction func goname(_ sender: Any) {
-        
+        self.view.removeFromSuperview()
     }
     
 

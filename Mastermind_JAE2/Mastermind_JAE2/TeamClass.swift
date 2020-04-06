@@ -24,7 +24,7 @@ class teamClass : Codable {
     var teamName : String
     var gameGuess : Int
     var everyGuess : Int
-    
+    //constructor
     init(name: String){
         self.teamName = name
         self.gamesP = 0
@@ -43,25 +43,29 @@ class teamClass : Codable {
         self.everyGuess = 0
     }
     
-    
+    //changes team name
     func changename(name: String){
         
         self.teamName = name
     }
+    //changes amount of games played
     func changegamesP(){
         self.gamesP = self.gamesP + 1
     }
+    //changes amount of games won
     func changegamesW(){
            self.gamesW = self.gamesW + 1
        }
+    //changes amount of games lost for a team
     func changegamesL(){
            self.gamesL = self.gamesL + 1
        }
+    //changes the teams average
     func changeaver(){
         self.aver = self.everyGuess/self.gamesP
           }
     
-    
+    //will add one game played, updates total guesses and team average
     func gameDONE(gamesP: Int, aver: Int, gameGuess: Int){
         
         self.gamesP = gamesP+1
@@ -95,6 +99,7 @@ class teamClass : Codable {
         self.aver = (self.everyGuess / gamesP)
  
     }
+    //persistant data saving stuff
     func archive(fileName: String) {
         let documentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
         let archiveURL = documentsDirectory.appendingPathComponent(fileName)
@@ -112,7 +117,7 @@ class teamClass : Codable {
     }
     
     
-    
+    //persistant data restoring variables
         func restore(fileName: String) {
             let documentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
             let archiveURL = documentsDirectory.appendingPathComponent(fileName)

@@ -9,7 +9,7 @@
 import UIKit
 
 class SecondPopUpViewController: UIViewController {
-
+//popup view controller for the timer page
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -9,7 +9,7 @@
 import UIKit
 
 class ThirdPopUpViewController: UIViewController {
-
+//popup view controller for the rules page
     override func viewDidLoad() {
         super.viewDidLoad()
         

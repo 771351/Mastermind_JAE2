@@ -9,7 +9,7 @@
 import UIKit
 
 class WGamePopUpViewController: UIViewController {
-
+//for view controller of winning game
     override func viewDidLoad() {
         super.viewDidLoad()
          self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)

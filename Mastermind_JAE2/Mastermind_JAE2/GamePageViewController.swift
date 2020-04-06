@@ -44,13 +44,26 @@ class GamePageViewController: UIViewController, UIPickerViewDataSource,UIPickerV
     @IBOutlet weak var Answer6: UILabel!
     @IBOutlet weak var Answer7: UILabel!
     @IBOutlet weak var Answer8: UILabel!
+    @IBOutlet weak var youWin: UIView!
+    
+    @IBOutlet weak var youLose: UIView!
+    @IBOutlet weak var winviewbackground: UIView!
+    
+    @IBAction func close(_ sender: Any) {
+        youWin.frame.origin.x = -1000
+        winviewbackground.alpha = 0
+    }
+    @IBAction func closelose(_ sender: Any) {
+        youLose.frame.origin.x = 1000
+        winviewbackground.alpha = 0
+    }
     
     
     var firstA = ""
     var secondA = ""
     var thirdA = ""
     var numOfGuesses = 0
-    
+    //creates an asnwer for the game
     func CorrectAnswer()
     {
         let firstAnswer = Int.random(in: 0 ... 9 )
@@ -71,7 +84,7 @@ class GamePageViewController: UIViewController, UIPickerViewDataSource,UIPickerV
                     thirdA = String(thirdAnswer)
 
     }
-    
+    //this function will check if the guess had the right numbers in the right place. If they do it will return a string with the filled in circles
     func CorrectPlacement(array:[String]) -> String
     {
         var string = ""
@@ -90,7 +103,7 @@ class GamePageViewController: UIViewController, UIPickerViewDataSource,UIPickerV
             }
         return string
     }
-    
+    //this function will check if the guess had the right numbers in the in the guess(not right place). If they do it will return a string with open circles
     func CorrectNumber(array:[String]) -> String
     {
         var string = ""
@@ -110,30 +123,34 @@ class GamePageViewController: UIViewController, UIPickerViewDataSource,UIPickerV
             }
         return string
     }
-    
+    // will hold guesses
     var guesses = [["","",""],["","",""],["","",""],["","",""],["","",""],["","",""],["","",""],["","",""],["","",""]]
-    
+    //used in picker view
     let nums = [["0","1","2","3","4","5","6","7","8","9"],["0","1","2","3","4","5","6","7","8","9"],["0","1","2","3","4","5","6","7","8","9"]]
-    
+    //number of collums in game pickerview
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 3
     }
+    //what does in the collums
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return nums[component][row]
     }
+    //number of rows in a collum
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return nums[component].count
     }
+    //used to put guesses in the right row
     var count = 0
-
+    
+//takes guess that is entered in pickerview and locks it into place. Then moves the pickerview numbers to the next row
     @IBAction func goButton(_ sender: Any) {
-        
+        //prints answer
         print(firstA + secondA + thirdA)
         
-        
+        //checks if the game should be over, checks if there is a number in all the slots
         if guesses[count][0] != "" && guesses[count][1] != "" && guesses[count][2] != "" && count < 8
 {
-         
+         //puts up clue?
         count = count + 1
             
             if count == 1
@@ -170,12 +187,12 @@ class GamePageViewController: UIViewController, UIPickerViewDataSource,UIPickerV
                    }
             
 }
-        
+       //ends game if the answer is correct
         if (Answer1.text == "●●●" || Answer2.text == "●●●" || Answer3.text == "●●●" || Answer4.text == "●●●" || Answer5.text == "●●●" || Answer6.text == "●●●" || Answer7.text == "●●●" || Answer8.text == "●●●" )
                      {
                          count = 9
                      }
-        
+        //resets everything getting ready for the next game
         if count >= 8
         {
             for row in (0...7)
@@ -219,29 +236,28 @@ class GamePageViewController: UIViewController, UIPickerViewDataSource,UIPickerV
                 Answer6.text = ""
                 Answer7.text = ""
                 Answer8.text = ""
+            //popups to say you lost
             if count == 8
             {
+                youLose.frame.origin.x = 178.11
+               winviewbackground.alpha = 0.8
                 count = 0
                 CorrectAnswer()
-            let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbLPopUpID") as! GamePopUpViewController
-                   self.addChild(popOverVC)
-                   popOverVC.view.frame = self.view.frame
-                   self.view.addSubview(popOverVC.view)
-                   popOverVC.didMove(toParent: self)
+                
+         
             }
+            //popup to say you won
             if count == 9
             {
+                youWin.frame.origin.x = 192
                 CorrectAnswer()
                 count = 0
-                let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbWPopUpID") as! WGamePopUpViewController
-                self.addChild(popOverVC)
-                popOverVC.view.frame = self.view.frame
-                self.view.addSubview(popOverVC.view)
-                popOverVC.didMove(toParent: self)
+                winviewbackground.alpha = 0.8
             }
         }
         
     }
+    //clears game and gets ready for a new one
     @IBAction func clearButton(_ sender: Any) {
         
         for row in (0...7)
@@ -290,9 +306,11 @@ class GamePageViewController: UIViewController, UIPickerViewDataSource,UIPickerV
         
     }
     
+    //everytime the pickerview gets touched it goes through this function
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if count == 0{
+            //puts guesses in label row one
               if component == 0  {
                 num1guess1.text = nums[component][row]
                 guesses[0][0] = nums[component][row]
@@ -443,7 +461,7 @@ class GamePageViewController: UIViewController, UIPickerViewDataSource,UIPickerV
             
         
             }
-        
+        //sets labels equal to 0
         if count == 8
         {
             
@@ -474,9 +492,11 @@ class GamePageViewController: UIViewController, UIPickerViewDataSource,UIPickerV
         }
         
     }
+    //creates an answer everytime the page is opened
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        youWin.layer.cornerRadius = 40
+        youLose.layer.cornerRadius = 40
           CorrectAnswer()
         // Do any additional setup after loading the view.
     }
