@@ -12,14 +12,14 @@ class GamePopUpViewController: UIViewController {
 //view controller for losing to game
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
+       
 
 
         // Do any additional setup after loading the view.
     }
     
     @IBAction func closePopUp(_ sender: UIButton) {
-         self.view.removeFromSuperview()
+         
     }
     
     /*

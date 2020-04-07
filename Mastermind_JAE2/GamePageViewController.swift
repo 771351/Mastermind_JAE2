@@ -44,6 +44,19 @@ class GamePageViewController: UIViewController, UIPickerViewDataSource,UIPickerV
     @IBOutlet weak var Answer6: UILabel!
     @IBOutlet weak var Answer7: UILabel!
     @IBOutlet weak var Answer8: UILabel!
+    @IBOutlet weak var youWin: UIView!
+    
+    @IBOutlet weak var youLose: UIView!
+    @IBOutlet weak var winviewbackground: UIView!
+    
+    @IBAction func close(_ sender: Any) {
+        youWin.frame.origin.x = -1000
+        winviewbackground.alpha = 0
+    }
+    @IBAction func closelose(_ sender: Any) {
+        youLose.frame.origin.x = 1000
+        winviewbackground.alpha = 0
+    }
     
     
     var firstA = ""
@@ -223,27 +236,23 @@ class GamePageViewController: UIViewController, UIPickerViewDataSource,UIPickerV
                 Answer6.text = ""
                 Answer7.text = ""
                 Answer8.text = ""
+            //popups to say you lost
             if count == 8
             {
+                youLose.frame.origin.x = 178.11
+               winviewbackground.alpha = 0.8
                 count = 0
                 CorrectAnswer()
-                //popups to say you won
-            let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbLPopUpID") as! GamePopUpViewController
-                   self.addChild(popOverVC)
-                   popOverVC.view.frame = self.view.frame
-                   self.view.addSubview(popOverVC.view)
-                   popOverVC.didMove(toParent: self)
+                
+         
             }
-            //popup to say you lost
+            //popup to say you won
             if count == 9
             {
+                youWin.frame.origin.x = 192
                 CorrectAnswer()
                 count = 0
-                let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbWPopUpID") as! WGamePopUpViewController
-                self.addChild(popOverVC)
-                popOverVC.view.frame = self.view.frame
-                self.view.addSubview(popOverVC.view)
-                popOverVC.didMove(toParent: self)
+                winviewbackground.alpha = 0.8
             }
         }
         
@@ -486,7 +495,8 @@ class GamePageViewController: UIViewController, UIPickerViewDataSource,UIPickerV
     //creates an answer everytime the page is opened
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        youWin.layer.cornerRadius = 40
+        youLose.layer.cornerRadius = 40
           CorrectAnswer()
         // Do any additional setup after loading the view.
     }
