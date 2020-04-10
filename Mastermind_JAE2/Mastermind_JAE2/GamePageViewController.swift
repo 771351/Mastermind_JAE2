@@ -49,8 +49,6 @@ class GamePageViewController: UIViewController, UIPickerViewDataSource,UIPickerV
     @IBOutlet weak var youLose: UIView!
     @IBOutlet weak var winviewbackground: UIView!
     
-    @IBOutlet weak var wonIn: UILabel!
-    
     @IBAction func close(_ sender: Any) {
         youWin.frame.origin.x = -1000
         winviewbackground.alpha = 0
@@ -158,42 +156,34 @@ class GamePageViewController: UIViewController, UIPickerViewDataSource,UIPickerV
             if count == 1
                    {
                        Answer1.text = CorrectPlacement(array: guesses[0]) + CorrectNumber(array: guesses[0])
-                    wonIn.text = "1 Guess!"
                    }
             if count == 2
                    {
                        Answer2.text = CorrectPlacement(array: guesses[1]) + CorrectNumber(array: guesses[1])
-                    wonIn.text = "2 Guesses!"
                    }
             if count == 3
                    {
                           Answer3.text = CorrectPlacement(array: guesses[2]) + CorrectNumber(array: guesses[2])
-                    wonIn.text = "3 Guesses!"
                    }
             if count == 4
                    {
                           Answer4.text = CorrectPlacement(array: guesses[3]) + CorrectNumber(array: guesses[3])
-                    wonIn.text = "4 Guesses!"
                    }
             if count == 5
                    {
                           Answer5.text = CorrectPlacement(array: guesses[4]) + CorrectNumber(array: guesses[4])
-                    wonIn.text = "5 Guesses!"
                    }
             if count == 6
                    {
                           Answer6.text = CorrectPlacement(array: guesses[5]) + CorrectNumber(array: guesses[5])
-                    wonIn.text = "6 Guesses!"
                    }
             if count == 7
                    {
                           Answer7.text = CorrectPlacement(array: guesses[6]) + CorrectNumber(array: guesses[6])
-                    wonIn.text = "7 Guesses!"
                    }
             if count == 8
                    {
                           Answer8.text = CorrectPlacement(array: guesses[7]) + CorrectNumber(array: guesses[7])
-                    wonIn.text = "8 Guesses!"
                    }
             
 }
